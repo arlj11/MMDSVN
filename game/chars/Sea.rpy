@@ -1,8 +1,7 @@
 define SeaMG = Character("Sea", who_color="#b1dffa", image="Sea")
 define SeaMGS = MGStats(5, "Aloof", False, 0, 0, False, 10)
-define SeaMGD = MGData(4, 3, True, False, False, True, True, True, False, True)
-# define SeaMGD = MGData.Lamia(Size=4, BSize=3)
-# $ SeaMGD.CanSwimLong = True
+define SeaMGD = MGData.Lamia(Size=4, BSize=3)
+$ SeaMGD.CanSwimLong = True
 
 image Sea = "0001_Sea/0001_Full_A.png"
 image Sea Happy = "0001_Sea/0001_Full_B.png"
@@ -36,7 +35,7 @@ label .intro:
 
     menu:
       pov "You have a..."
-      "Lovey Name.":
+      "Lovely Name.":
         SeaMG Happy "Thank you."
         $ SeaMGS.Mood += 1 
         $ SeaMGS.Affection += 1
