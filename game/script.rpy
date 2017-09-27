@@ -5,7 +5,7 @@
 
 define povFirstName = ""
 define povLastName = ""
-define povName = ""             # povName = povFirstName + povLastName
+define povName = "Dev"             # povName = povFirstName + povLastName
 define pov = DynamicCharacter("povName")
 
 define Smith = Character('Ms. Smith')
@@ -28,7 +28,7 @@ label start:
   scene bg room
   
   if povName == 'Dev':
-    jump MGExplained
+    jump Loactions
   else:
     "Welcome to the world of Monsters Musume Dating."
     if povName == '':

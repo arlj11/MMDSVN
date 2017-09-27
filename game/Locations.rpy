@@ -9,7 +9,19 @@ label Loactions:
     menu:
      "Where to?"
      "Beach":
-         jump Beach
+         if FindDateLocation == True:
+            $ DateLocation = "Beach"
+            $ FindDateLocation = False
+            jump DateMG
+         else:
+            jump Beach
+     "Park":
+         if FindDateLocation == True:
+            $ DateLocation = "Park"
+            $ FindDateLocation = False
+            jump DateMG
+         else:
+            jump Park
 
     return
 
@@ -17,6 +29,7 @@ label Beach:
 
     scene bg Beach with dissolve
     $ INLocation = "Beach"
+    $ DateLocation = INLocation
 
     menu:
      "What do you want to do?"
@@ -28,5 +41,19 @@ label Beach:
        else:
          "Nobody is here."
          jump Loactions
+
+return
+
+label Park:
+
+    scene bg Park with dissolve
+    $ INLocation = "Park"
+    $ DateLocation = INLocation
+
+    menu:
+     "What do you want to do?"
+     "Look around":
+        "Nobody is here."
+        jump Loactions
 
 return

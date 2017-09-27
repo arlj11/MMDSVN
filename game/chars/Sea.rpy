@@ -17,7 +17,7 @@ label SeaMain:
 
     if povName == 'Dev':
        Dev "[SeaMG] Stats: Met=[SeaMGS.Met], Mood=[SeaMGS.Mood], Affection=[SeaMGS.Affection], AffectionEvent=[SeaMGS.AffectionEvent], Patience=[SeaMGS.Patience]."
-       Dev "[SeaMG] Data: Size=[SeaMGD.Size], BSize=[SeaMGD.BSize], HasHands=[SeaMGD.HasHands], HasWings=[SeaMGD.HasWings], HasLegs=[SeaMGD.HasLegs], HasTail=[SeaMGD.HasTail], HasScales=[SeaMGD.HasScales], CanSwim=[SeaMGD.CanSwimLong], CanFly=[SeaMGD.CanFly]."
+       Dev "[SeaMG] Data: Size=[SeaMGD.Size], BSize=[SeaMGD.BSize], HasHands=[SeaMGD.HasHands], HasWings=[SeaMGD.HasWings], HasLegs=[SeaMGD.HasLegs], HasTail=[SeaMGD.HasTail], HasScales=[SeaMGD.HasScales], HasGills=[SeaMGD.HasGills], CanSwim=[SeaMGD.CanSwimLong], CanFly=[SeaMGD.CanFly], IsColdB=[SeaMGD.IsColdB], CanWeb=[SeaMGD.CanWeb]."
 
     if SeaMGS.Met == False:
       jump .intro
@@ -35,7 +35,7 @@ label .intro:
 
     menu:
       pov "You have a..."
-      "Lovely Name.":
+      "Lovey Name.":
         SeaMG Happy "Thank you."
         $ SeaMGS.Mood += 1 
         $ SeaMGS.Affection += 1
@@ -53,7 +53,7 @@ label .MeetAgain:
     if SeaMGS.Affection < 0:
         show Sea Mad
         SeaMG "Oh, You again."
-    elif SeaMGS.Affection > 100 and SeaMGS.AffectionEvent == False:
+    elif SeaMGS.Affection > 100 and SeaMGS.AffectionEvent == False and INLocation == "Beach":
       jump .AffectionEvent
     else:
         show Sea

@@ -3,14 +3,16 @@ define MGColor = ""
 define MGImage = ""
 define MGI = DynamicCharacter("MGName", color="MGColor", image="MGImage")
 define MGIS = MGStats(5, "", False, 0, 0, False, 10)
-define MGID = MGData(4, 3, False, False, False, False, False, False, False, False, False)
+define MGID = MGData(4, 3, False, False, False, False, False, False, False, False, False, False)
 
 define INLocation = ""
+define DateLocation = ""
+define FindDateLocation = False
 
 label TalkTo(MGI="MGN", MGIS="MGS", MGID="MGD"):
 
   if MGIS.Patience < 1:
-    MGI "I don't want to talk right now."
+    MGI Mad "I don't want to talk right now."
     jump Loactions
   else:
     MGI "What do you want to talk about?"
@@ -50,14 +52,27 @@ label AboutPov:
 return 
 
 label DateMG:
+
+    $ MGD = MGI
+    $ MGDS = MGIS
+    $ MGDD = MGID
+    
+    if povName == 'Dev':
+       Dev "DateLocation=[DateLocation], FindDateLocation=[FindDateLocation]"
     menu:
-       "Let's go for a swim" if INLocation == "Beach":
-         if MGID.CanSwimLong == True:
-           MGI Happy "I love swiming!"
-           $ MGIS.Mood += 10
-           $ MGIS.Affection += 10
+       "Let's go for a swim" if DateLocation == "Beach":
+         if MGDD.CanSwimLong == True:
+           MGD Happy "I love swiming!"
+           $ MGDS.Mood += 10
+           $ MGDS.Affection += 10
+       "Let's go for a walk" if DateLocation == "Park":
+           $ MGDS.Mood += 5
+           $ MGDS.Affection += 5
+       "Let's go Someplace else":
+         $ FindDateLocation = True
+         jump Loactions
     Dev "Work in progress."
-    call TalkTo(MGI, MGIS, MGID)
+    call TalkTo(MGD, MGDS, MGDD)
 
 return 
 
