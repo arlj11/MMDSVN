@@ -12,4 +12,4 @@ define MGDName = ""
 define MGDColor = ""
 define MGD = DynamicCharacter("MGName", color="MGColor")
 define MGDS = MGStats(5, "", False, 0, 0, False, 10)
-define MGDD = MGData(4, 3, False, False, False, False, False, False, False, False, False, False)
+define MGDD = MGData(4, 3, False, False, False, False, False, False, False, False, False, False, False)
