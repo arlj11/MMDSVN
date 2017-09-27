@@ -44,7 +44,7 @@ label .intro:
         $ SeaMGS.Mood -= 1 
         $ SeaMGS.Affection -= 1
     
-    call TalkTo(SeaMG, SeaMGS, SeaMGD)
+    call TalkTo(SeaMG, SeaMGS, SeaMGD, "Sea")
 
     return 
 
@@ -59,7 +59,7 @@ label .MeetAgain:
         show Sea
         SeaMG "Hello there."
 
-    call TalkTo(SeaMG, SeaMGS, SeaMGD)
+    call TalkTo(SeaMG, SeaMGS, SeaMGD, "Sea")
 
     return 
 
