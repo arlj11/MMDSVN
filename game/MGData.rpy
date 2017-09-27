@@ -39,3 +39,31 @@ init python:
         @staticmethod
         def Arachne(Size, BSize):
             return MGData(Size, BSize, True, False, True, False, False, False, False, False, True)
+            
+        @staticmethod
+        def Centaur(Size, BSize):
+            return MGData(Size, BSize, True, False, True, True, False, False, False, False, False)
+            
+        @staticmethod
+        def Harpy(Size, BSize):
+            return MGData(Size, BSize, False, True, True, False, False, False, True, False, False)
+            
+        @staticmethod
+        def Slime(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, False, False, False, False)
+            
+        @staticmethod
+        def Mermaid(Size, BSize):
+            return MGData(Size, BSize, True, False, False, True, False, True, False, False, False)
+            
+        @staticmethod
+        def Cyclops(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, False, False, False, False)
+            
+        @staticmethod
+        def Ogre(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, False, False, False, False)
+            
+        @staticmethod
+        def Zombie(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, False, False, False, False)
