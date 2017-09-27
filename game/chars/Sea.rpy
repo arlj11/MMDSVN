@@ -17,7 +17,7 @@ label SeaMain:
 
     if povName == 'Dev':
        Dev "[SeaMG] Stats: Met=[SeaMGS.Met], Mood=[SeaMGS.Mood], Affection=[SeaMGS.Affection], AffectionEvent=[SeaMGS.AffectionEvent], Patience=[SeaMGS.Patience]."
-       Dev "[SeaMG] Data: Size=[SeaMGD.Size], BSize=[SeaMGD.BSize], HasHands=[SeaMGD.HasHands], HasWings=[SeaMGD.HasWings], HasLegs=[SeaMGD.HasLegs], HasTail=[SeaMGD.HasTail], HasScales=[SeaMGD.HasScales], HasGills=[SeaMGD.HasGills], CanSwim=[SeaMGD.CanSwimLong], CanFly=[SeaMGD.CanFly], IsColdB=[SeaMGD.IsColdB], CanWeb=[SeaMGD.CanWeb]."
+       Dev "[SeaMG] Data: Size=[SeaMGD.Size], BSize=[SeaMGD.BSize], HasHands=[SeaMGD.HasHands], HasWings=[SeaMGD.HasWings], HasLegs=[SeaMGD.HasLegs], HasTail=[SeaMGD.HasTail], HasScales=[SeaMGD.HasScales], HasGills=[SeaMGD.HasGills], CanSwim=[SeaMGD.CanSwimLong], CanFly=[SeaMGD.CanFly], IsColdB=[SeaMGD.IsColdB], CanWeb=[SeaMGD.CanWeb], CanShapeshift=[SeaMGD.CanShapeshift]."
 
     if SeaMGS.Met == False:
       jump .intro
