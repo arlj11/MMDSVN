@@ -57,7 +57,7 @@ init python:
             return MGData(Size, BSize, True, False, False, True, False, True, False, False, False)
             
         @staticmethod
-        def Cyclops(Size, BSize):
+        def Monoeye(Size, BSize):
             return MGData(Size, BSize, True, False, True, False, False, False, False, False, False)
             
         @staticmethod
