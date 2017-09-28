@@ -3,7 +3,7 @@ define MGColor = ""
 define MGImage = ""
 define MGI = DynamicCharacter("MGName", color="MGColor", image="MGImage")
 define MGIS = MGStats(5, "", False, 0, 0, False, 10)
-define MGID = MGData(4, 3, False, False, False, False, False, False, False, False, False, False, False)
+define MGID = MGData(4, 3, False, False, False, False, False, False, False, False, False, False, False, False, False)
 define ref = ""
 
 define INLocation = ""
