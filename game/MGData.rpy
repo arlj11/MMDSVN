@@ -26,6 +26,7 @@ init python:
             self.CanFly = bool(CanFly)
             self.IsColdB = bool(IsColdB)
             self.CanWeb = bool(CanWeb)
+            self.CanShapeshift = bool(CanShapeshift)
         
         # Creating a Species Preset:
         #
