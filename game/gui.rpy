@@ -417,7 +417,7 @@ init python:
         gui.button_text_size = 34
         gui.label_text_size = 36
 
-        ## Adjust the Location of the textbox.
+        ## Adjust the location of the textbox.
         gui.textbox_height = 240
         gui.name_xpos = 80
         gui.text_xpos = 90

@@ -14,7 +14,7 @@ label TalkTo(MGI="MGN", MGIS="MGS", MGID="MGD", reference):
   $ ref = reference
   if MGIS.Patience < 1:
     MGI Mad "I don't want to talk right now."
-    jump Locations
+    jump Loactions
   else:
     MGI "What do you want to talk about?"
     menu:
@@ -27,7 +27,7 @@ label TalkTo(MGI="MGN", MGIS="MGS", MGID="MGD", reference):
         jump DateMG
        "Bye":
         MGI "Have fun."
-        jump Locations
+        jump Loactions
 
 return 
 
@@ -71,7 +71,7 @@ label DateMG:
            $ MGDS.Affection += 5
        "Let's go Someplace else":
          $ FindDateLocation = True
-         jump Locations
+         jump Loactions
     Dev "Work in progress."
     call TalkTo(MGD, MGDS, MGDD, ref)
 
