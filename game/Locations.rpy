@@ -9,25 +9,21 @@ label Loactions:
     menu:
      "Where to?"
      "Beach":
-         if FindDateLocation == True:
-            $ DateLocation = "Beach"
-            $ FindDateLocation = False
-            jump DateMG
-         else:
-            jump Beach
+         jump Beach
      "Park":
-         if FindDateLocation == True:
-            $ DateLocation = "Park"
-            $ FindDateLocation = False
-            jump DateMG
-         else:
-            jump Park
+         jump Park
 
     return
 
 label Beach:
 
     scene bg Beach with dissolve
+    
+    if FindDateLocation == True:
+        $ DateLocation = "Beach"
+        $ FindDateLocation = False
+        jump DateMG
+
     $ INLocation = "Beach"
     $ DateLocation = INLocation
 
@@ -47,6 +43,11 @@ return
 label Park:
 
     scene bg Park with dissolve
+    if FindDateLocation == True:
+        $ DateLocation = "Park"
+        $ FindDateLocation = False
+        jump DateMG
+
     $ INLocation = "Park"
     $ DateLocation = INLocation
 
