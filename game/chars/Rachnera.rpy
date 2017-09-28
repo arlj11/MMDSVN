@@ -9,7 +9,7 @@ label RachneraMain:
     
     if povName == 'Dev':
        Dev "[RachneraMG] Stats: Met=[RachneraMGS.Met], Mood=[RachneraMGS.Mood], Affection=[RachneraMGS.Affection], AffectionEvent=[RachneraMGS.AffectionEvent], Patience=[RachneraMGS.Patience]."
-       Dev "[RachneraMG] Data: Size=[RachneraMGD.Size], BSize=[RachneraMGD.BSize], HasHands=[RachneraMGD.HasHands], HasWings=[RachneraMGD.HasWings], HasLegs=[RachneraMGD.HasLegs], HasTail=[RachneraMGD.HasTail], HasScales=[RachneraMGD.HasScales], HasGills=[RachneraMGD.HasGills], CanSwim=[RachneraMGD.CanSwimLong], CanFly=[RachneraMGD.CanFly], IsColdB=[RachneraMGD.IsColdB], CanWeb=[RachneraMGD.CanWeb], CanShapeshift=[RachneraMGD.CanShapeshift]."
+       Dev "[RachneraMG] Data: Size=[RachneraMGD.Size], BSize=[RachneraMGD.BSize], HasHands=[RachneraMGD.HasHands], HasWings=[RachneraMGD.HasWings], HasLegs=[RachneraMGD.HasLegs], HasTail=[RachneraMGD.HasTail], HasScales=[RachneraMGD.HasScales], HasGills=[RachneraMGD.HasGills], CanSwim=[RachneraMGD.CanSwimLong], CanFly=[RachneraMGD.CanFly], IsColdB=[RachneraMGD.IsColdB], CanWeb=[RachneraMGD.CanWeb], CanShapeshift=[RachneraMGD.CanShapeshift], IsUndead=[RachneraMGD.IsUndead], IsPlant=[RachneraMGD.IsPlant]."
 
     if RachneraMGS.Met == False:
         jump .intro
