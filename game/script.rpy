@@ -28,7 +28,7 @@ label start:
   scene bg room
   
   if povName == 'Dev':
-    jump Loactions
+    jump Locations
   else:
     "Welcome to the world of Monsters Musume Dating."
     if povName == '':
@@ -120,5 +120,5 @@ label Begin:
     Dev "Going to use the rarity system as the bases of how challenging they will be."
     "You won't see all the girls. You will need to unlock them with special requirements."
     Dev "Will make a NPC to give tips and tricks in game."
-    jump Loactions
+    jump Locations
     return
