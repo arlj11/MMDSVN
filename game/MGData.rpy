@@ -38,25 +38,41 @@ init python:
         #     return MGData(Size, BSize, HasHands, HasWings, HasLegs, HasTail, HasScales, HasGills, HasMagic, CanSwimLong, CanFly, IsColdB, CanWeb, CanShapeshift, IsUndead, IsPlant)
         
         @staticmethod
-        def Lamia(Size, BSize):
-            return MGData(Size, BSize, True, False, False, True, True, False, False, True, False, True, False, False, False, False)
-        
-        @staticmethod
         def Arachne(Size, BSize):
             return MGData(Size, BSize, True, False, True, False, False, False, False, False, False, False, True, False, False, False)
             
         @staticmethod
         def Centaur(Size, BSize):
             return MGData(Size, BSize, True, False, True, True, False, False, False, False, False, False, False, False, False, False)
-            
+        
+        @staticmethod
+        def Devil(Size, BSize):
+            return MGData(Size, BSize, True, True, True, True, False, False, True, False, False, False, False, False, False, False)
+        
+        @staticmethod
+        def Dragonewt(Size, BSize):
+            return MGData(Size, BSize, True, True, True, True, True, False, False, False, False, True, False, False, False, False)
+        
+        @staticmethod
+        def Dryad(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, False, True, False, False, False, False, False, False, True)
+        
         @staticmethod
         def Harpy(Size, BSize):
             return MGData(Size, BSize, False, True, True, False, False, False, False, False, True, False, False, False, False, False)
+        
+        @staticmethod
+        def Kitsune(Size, BSize):
+            return MGData(Size, BSize, True, False, True, True, False, False, True, False, False, False, False, True, False, False)
             
         @staticmethod
-        def Slime(Size, BSize):
-            return MGData(Size, BSize, True, False, True, False, False, False, False, False, False, False, False, True, False, False)
-            
+        def Kobold(Size, BSize):
+            return MGData(Size, BSize, True, False, True, True, False, False, False, False, False, False, False, False, False, False)
+        
+        @staticmethod
+        def Lamia(Size, BSize):
+            return MGData(Size, BSize, True, False, False, True, True, False, False, False, False, True, False, False, False, False)
+        
         @staticmethod
         def Mermaid(Size, BSize):
             return MGData(Size, BSize, True, False, False, True, True, True, False, True, False, False, False, False, False, False)
@@ -68,7 +84,23 @@ init python:
         @staticmethod
         def Ogre(Size, BSize):
             return MGData(Size, BSize, True, False, True, False, False, False, False, False, False, False, False, False, False, False)
-            
+        
+        @staticmethod
+        def Scylla(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, True, False, True, False, False, False, False, False, False)
+        
+        @staticmethod
+        def Shapeshifter(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, False, False, False, False, False, False, True, False, False)
+        
+        @staticmethod
+        def Slime(Size, BSize):
+            return MGData(Size, BSize, True, False, True, False, False, False, False, False, False, False, False, True, False, False)
+        
+        @staticmethod
+        def VampireBat(Size, BSize):
+            return MGData(Size, BSize, False, True, True, False, False, False, False, False, True, False, False, False, False, False)
+        
         @staticmethod
         def Zombie(Size, BSize):
             return MGData(Size, BSize, True, False, True, False, False, False, False, False, False, False, False, False, True, False)
