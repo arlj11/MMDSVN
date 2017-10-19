@@ -1,19 +1,34 @@
-define MGChance = renpy.random.randint(1, 10)
+define FirstLRun = True
+
 define distance = 0
 
 image bg Beach = "Beach_Backgroud.jpg"
 image bg Warehouse = "Warehouse_Background.jpg"
 
+screen Timer:
+    frame:
+        has vbox
+        text "Day: [Days]"
+        text "[DayOfWeek]"
+        text "[TimeOfDay]"
+
+screen MapMenu:
+    frame:
+        has vbox
+        text "Map"
+        textbutton "Beach" action Jump("Beach")
+        textbutton "Park" action Jump("Park")
+
 label Locations:
-
+    
+    if FirstLRun == True:
+        $FirstLRun = False
+    else:
+        call TimeJump
+    
     scene bg map with dissolve
-
-    menu:
-     "Where to?"
-     "Beach":
-         jump Beach
-     "Park":
-         jump Park
+    show screen Timer
+    call screen MapMenu
 
     return
 
@@ -32,8 +47,8 @@ label Beach:
     menu:
      "What do you want to do?"
      "Look around":
-       $ MGChance = renpy.random.randint(1, 10)
-       if MGChance < SeaMGS.Chance:
+       $ MGChance = PovLuc + renpy.random.randint(1, 100)
+       if MGChance > SeaMGS.Chance:
          "You see a woman near surf."
          jump SeaMain
        else:
@@ -59,7 +74,7 @@ label Park:
        "Nobody is here."
        $ distance = 0
        jump Locations
-     "Walk":
+     "Walk" if povName == 'Dev':
        if distance < 1:
          "It's nice out, and very spacious. Can't imagine anyone would mind a walk out here."
          $ distance += 1
@@ -75,8 +90,8 @@ label Park:
        menu:
         "You see a small warehouse. It's labeled \"Park Storage\" but it doesn't seem like someone has used it in a while."
         "Try to enter":
-          $ MGChance = renpy.random.randint(1, 10)
-          if MGChance < 11:
+          $ MGChance = PovLuc + renpy.random.randint(1, 100)
+          if MGChance > 11:
             "The door is surprisingly open."
             jump Warehouse
           "It's locked."
